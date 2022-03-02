@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CatPhotoApp</title>
+		<!-- import google font -->
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Lobster"
+			type="text/css"
+		/>
+		<style>
+			h2 {
+				color: blue;
+				font-family: Lobster;
+			}
+
+			p {
+				font-size: 13px;
+				font-family: monospace;
+			}
+
+			/* class */
+			.blue-text {
+				color: blue;
+			}
+
+			.red-text {
+				color: red;
+			}
+
+			/* sizing images */
+			.smaller-image {
+				width: 100px;
+			}
+
+			/* add borders around elements */
+			.thick-green-border {
+				border-width: 10px;
+				border-color: green;
+				border-style: solid;
+				/* border-radius: 10px; */
+				border-radius: 50%;
+			}
+
+			/* change background color */
+			.silver-background {
+				background-color: silver;
+			}
+
+			/* using id to change background color */
+			#cat-photo-form {
+				background-color: green;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		HTML5 introduces more descriptive HTML tags. These include main, header, 
+		footer, nav, video, article, section and others. These tags give a 
+		descriptive structure to your HTML, make your HTML easier to read, and 
+		help with Search Engine Optimization (SEO) and accessibility.-->
+		<!-- inline style -->
+		<h2 style="color: red" class="blue-text">CatPhotoApp</h2>
+		<!-- The main tag helps search engines find the main content of your page. -->
+		<main>
+			<!-- link to external page -->
+			<a href="https://www.freecatphotoapp.com" target="_blank">cat photos</a>
+
+			<!-- link to internal section -->
+			<a href="#footer">jump to bottom</a>
+
+			<!-- nest anchor element with a paragraph -->
+			<p>
+				click here to view more
+				<a href="#" target="_blank">A cute orange cat lying on its back.</a>
+			</p>
+
+			<!-- add image to website -->
+			<!-- turn an image into a link -->
+			<a href="#">
+				<img
+					src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg"
+					alt="A cute orange cat lying on its back."
+					class="smaller-image thick-green-border"
+				/>
+			</a>
+
+			<!-- next many elements within single div element -->
+			<!-- The div / division element, is a general purpose container for other elements -->
+			<div class="silver-background">
+				<!-- bulleted unordered list -->
+				<p class="red-text">Things cats love:</p>
+				<ul>
+					<li>milk</li>
+					<li>cheese</li>
+					<li>cuddle</li>
+				</ul>
+
+				<!-- ordered list -->
+				<p class="red-text">Top 3 things cats hate:</p>
+				<ol>
+					<li>cat nip</li>
+					<li>laser pointers</li>
+					<li>lasagna</li>
+				</ol>
+			</div>
+			<!-- create a form element -->
+			<!-- id attributes should be unique / is not reusable and should only be applied to one element -->
+			<!-- id has a higher specificity (importance) than a class -->
+			<form
+				id="cat-photo-form"
+				action="https://www.freecatphotoapp.com/submit-cat-photo"
+			>
+				<!-- use value attribute when as the value user choose each radio / checkbox buttons-->
+				<!-- use checked attribute to set value by default -->
+				<!-- set of radio buttons -->
+				<label for="indoor">
+					<input
+						id="indoor"
+						value="indoor"
+						type="radio"
+						name="indoor-outdoor"
+						checked
+					/>Indoor
+				</label>
+				<label for="outdoor">
+					<input
+						id="outdoor"
+						value="outdoor"
+						type="radio"
+						name="indoor-outdoor"
+					/>outdoor
+				</label>
+				<!-- set of checkbox buttons -->
+				<label for="loving"
+					><input
+						id="loving"
+						value="loving"
+						type="checkbox"
+						name="personality"
+						cheked
+					/>
+					Loving</label
+				>
+				<label for="caring"
+					><input
+						id="caring"
+						value="caring"
+						type="checkbox"
+						name="personality"
+					/>
+					Loving</label
+				>
+				<label for="living"
+					><input
+						id="living"
+						value="living"
+						type="checkbox"
+						name="personality"
+					/>
+					Loving</label
+				>
+				<!-- input text field -->
+				<!-- make a field required using required attribute -->
+				<input type="text" name="" id="" placeholder="cat photo URL" required />
+				<!-- add submit button to form -->
+				<button type="submit">Submit</button>
+			</form>
+
+			<!-- paragraph -->
+			<p>
+				Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+				attack your ankles chase the red dot, hairball run catnip eat the grass
+				sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
+				everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+				Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+				attack your ankles chase the red dot, hairball run catnip eat the grass
+				sniff.
+			</p>
+			<p>
+				Purr jump eat the grass rip the couch scratched sunbathe, shed
+				everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+				Kitty ipsum dolor sit amet, shed everywhere shed everywhere stretching
+				attack your ankles chase the red dot, hairball run catnip eat the grass
+				sniff. Purr jump eat the grass rip the couch scratched sunbathe, shed
+				everywhere rip the couch sleep in the sink fluffy fur catnip scratched.
+			</p>
+			<p>
+				Meowwww loved it, hated it, loved it, hated it yet spill litter box,
+				scratch at owner, destroy all furniture, especially couch or lay on arms
+				while you're using the keyboard. Missing until dinner time toy mouse
+				squeak roll over. With tail in the air lounge in doorway. Man running
+				from cops stops to pet cats, goes to jail.
+			</p>
+			<p>
+				Intently stare at the same spot poop in the plant pot but kitten is
+				playing with dead mouse. Get video posted to internet for chasing red
+				dot leave fur on owners clothes meow to be let out and mesmerizing birds
+				leave fur on owners clothes or favor packaging over toy so purr for no
+				reason. Meow to be let out play time intently sniff hand run outside as
+				soon as door open yet destroy couch.
+			</p>
+		</main>
+
+		<footer id="footer">Copyright Cat Photo App</footer>
+	</body>
+</html>
