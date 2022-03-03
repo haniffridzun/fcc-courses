@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>inherit style</title>
+		<style>
+			/* body element can also be styled with CSS */
+			/* it's will inherit to whole document */
+			body {
+				background-color: black;
+				color: green;
+				font-family: monospace;
+			}
+
+			/* class will override the style from the body */
+			.pink-text {
+				color: pink !important; /* override all other styles by using !important */
+			}
+
+			/* override styles in subsequent CSS */
+			/* the order of the class declarions in <style> section  is important*/
+			/* LIFO */
+			.blue-text {
+				color: blue;
+			}
+
+			/* override class declarations by styling ID attr */
+			#orange-text {
+				color: orange;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- it doesn't matter which order the classes are listed in the HTML element -->
+		<!-- ID attr will always take precedence -->
+		<!-- override class declarations with inline styles -->
+		<h1 id="orange-text" class="blue-text pink-text" style="color: white">
+			hello world
+		</h1>
+	</body>
+</html>
