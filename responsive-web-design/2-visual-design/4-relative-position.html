@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Relative Position</title>
+		<style>
+			/* CSS treats each HTML element as its own box */
+			/* usually referred to as CSS box model */
+			/* block-level items automatically start on a new line (heading / p /div) */
+			/* inline items sit within surrounding content (images / spans) */
+			h2 {
+				/* relative use to specify how CSS move it relative to its current position */
+				/* it pairs with offset properties of left / right and top / bottom */
+				position: relative;
+				top: 15px;
+				/* changing element's position to relative does not remove it from normal flow */
+				/* other elements around it still behave as if that item were in its default position */
+			}
+
+			/* absolute locks the element in place relative to its parent container */
+			/* this removes the element from the normal flow of the document */
+			/* so surrounding items ignore it. */
+			#searchbar {
+				position: absolute;
+				top: 50px;
+				right: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>On Being Well-Positioned</h1>
+		<h2>Move me!</h2>
+		<p>I still think the h2 is where it normally sits.</p>
+		<h1>Welcome!</h1>
+		<section>
+			<form id="searchbar">
+				<label for="search">Search:</label>
+				<input type="search" id="search" name="search" />
+				<input type="submit" name="submit" value="Go!" />
+			</form>
+		</section>
+	</body>
+</html>
