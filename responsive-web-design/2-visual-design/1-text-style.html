@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Text Style</title>
+		<style>
+			h4 {
+				/* create visual balance using text-align property */
+				/* align text options: justify, center, right, left */
+				text-align: center;
+				/* adjust height of element using height property */
+				/* height: 25px; */
+				/* adjust background-color property of text */
+				background-color: rgba(45, 45, 45, 0.1);
+				padding: 10px;
+				/* adjust size of element  */
+				font-size: 27px;
+				/* use text-transform property to make text: */
+				/* lowercase / uppercase / capitalize / initial / inherit / none */
+				text-transform: uppercase;
+			}
+			p {
+				text-align: justify;
+			}
+			.links {
+				margin-right: 20px;
+				color: black;
+				/* control the opacity of element */
+				opacity: 0.7;
+			}
+			.fullCard {
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				margin: 10px 5px;
+				padding: 4px;
+				/* adjust width of an element using width property */
+				width: 245px;
+			}
+			.cardContent {
+				padding: 10px;
+			}
+
+			#thumbnail {
+				/* add shadow to element */
+				/* box-shadow takes values for */
+				/* offset-x :: how far to push the shadow horizontally */
+				/* offset-y :: how far to push the shadow vertically */
+				/* blur-radius -- optional */
+				/* spread-radius -- optional */
+				/* color -- in order */
+				box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+					0 6px 6px rgba(0, 0, 0, 0.23);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fullCard" id="thumbnail">
+			<div class="cardContent">
+				<div class="cardText">
+					<!-- use s tag to strikethrough text -->
+					<!-- s tag applies the CSS of text-decoration: line-through; to element -->
+					<h4><s>Google</s></h4>
+					<!-- create horizontal line using hr element -->
+					<hr />
+					<!-- use strong tag to make text bold -->
+					<!-- use u tag to underline text -->
+					<!-- use em tag to italicize text -->
+					<p>
+						<em
+							>Google was founded by Larry Page and Sergey Brin while they were
+							<u>Ph.D. students</u> at <strong>Stanford University</strong>.</em
+						>
+					</p>
+				</div>
+				<div class="cardLinks">
+					<a
+						href="https://en.wikipedia.org/wiki/Larry_Page"
+						target="_blank"
+						class="links"
+						>Larry Page</a
+					>
+					<a
+						href="https://en.wikipedia.org/wiki/Sergey_Brin"
+						target="_blank"
+						class="links"
+						>Sergey Brin</a
+					>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
