@@ -6,11 +6,38 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Variables</title>
 		<style>
+			/* inherit CSS variables */
+			/* to make use of inheritance, CSS variables are often defined in :root element */
+			/* :root is a pseudo-class that matches the root element of the document */
+			/* by creating variables in :root, they will be available globally */
+			:root {
+				--penguin-size: 300px;
+				--penguin-skin: grey;
+				--penguin-belly: pink;
+				--penguin-beak: orange;
+			}
+
+			body {
+				background: var(--penguin-belly);
+			}
+
+			/* override these variables by setting them again within specific element */
+			.penguin {
+				--penguin-belly: white;
+			}
+
+			@media (max-width: 300px) {
+				:root {
+					--penguin-size: 200px;
+					--penguin-skin: black;
+				}
+			}
+
 			.penguin {
 				/* use CSS variables to change several elements at once */
-				--penguin-skin: gray;
-				--penguin-belly: white;
-				--penguin-beak: orange;
+				/* --penguin-skin: gray; */
+				/* --penguin-belly: white; */
+				/* --penguin-beak: orange; */
 
 				position: relative;
 				margin: auto;
@@ -42,14 +69,34 @@
 			}
 
 			.right-hand {
-				top: 0%;
-				left: -5%;
-				background: var(--penguin-skin, gray);
+				top: 5%;
+				left: 25%;
+				background: var(--penguin-skin, black);
 				width: 30%;
 				height: 60%;
 				border-radius: 30% 30% 120% 30%;
-				transform: rotate(45deg);
+				transform: rotate(130deg);
 				z-index: -1;
+				animation-duration: 3s;
+				animation-name: wave;
+				animation-iteration-count: infinite;
+				transform-origin: 0% 0%;
+				animation-timing-function: linear;
+			}
+
+			@keyframes wave {
+				10% {
+					transform: rotate(110deg);
+				}
+				20% {
+					transform: rotate(130deg);
+				}
+				30% {
+					transform: rotate(110deg);
+				}
+				40% {
+					transform: rotate(130deg);
+				}
 			}
 
 			.left-hand {
