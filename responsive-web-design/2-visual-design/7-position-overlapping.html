@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Overlapping Elements</title>
+		<style>
+			div {
+				width: 60%;
+				height: 200px;
+				margin-top: 20px;
+			}
+
+			.first {
+				background-color: red;
+				position: absolute;
+				/* overlap elements */
+				/* position: absolute / relative / fixed / sticky */
+				/* the element coming later in the HTML markup will, by default, appear on */
+				/* top of the other elements. we can specify the order of stacked element */
+				/* using z-index property. higher value z-index will move it higher in the stack */
+				z-index: 2;
+			}
+
+			.second {
+				background-color: blue;
+				position: absolute;
+				left: 40px;
+				top: 50px;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first"></div>
+		<div class="second"></div>
+	</body>
+</html>

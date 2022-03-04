@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Hue</title>
+		<style>
+			body {
+				background-color: #ffffff;
+			}
+
+			/* hue(H) - spectrum of colors from red to green to blue. */
+			/* hsl() use color wheel concept instead of spectrum */
+			/* where angle of color on the circle is value between 0 - 360 */
+
+			/* saturation(S) - amount of gray in a color */
+			/* this is given as percentage with 100% being fully saturated */
+
+			/* lightless(L) - amount of white or black in a color. */
+			/* 0% means black / 50% means normal color / 100% means white */
+			.green {
+				background-color: hsl(120, 100%, 50%);
+			}
+
+			.cyan {
+				background-color: hsl(180, 100%, 50%);
+			}
+
+			.blue {
+				background-color: hsl(240, 100%, 50%);
+			}
+
+			div {
+				display: inline-block;
+				height: 100px;
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="green"></div>
+		<div class="cyan"></div>
+		<div class="blue"></div>
+	</body>
+</html>
