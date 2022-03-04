@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animation State</title>
+		<style>
+			div {
+				height: 40px;
+				width: 70%;
+				background: black;
+				margin: 50px auto;
+				border-radius: 5px;
+			}
+
+			#rect {
+				/* animation properties control how the animation should behave */
+				/* animation-name sets the name of the animation, which is later used by @keyframes */
+				animation-name: rainbow;
+				/* animation-duration sets the length of time for the animation */
+				animation-duration: 5s;
+			}
+
+			/* @keyframes rule controls what happen during that animation */
+			/* to specify exactly what happens within the animation over the duration */
+			@keyframes rainbow {
+				/* 0% is how the element displays in the opening scene */
+				0% {
+					background-color: blue;
+				}
+				50% {
+					background-color: green;
+				}
+				/* 100% is how the element appears at the end */
+				100% {
+					background-color: yellow;
+				}
+			}
+
+			button {
+				border-radius: 5px;
+				color: white;
+				background-color: #0f5897;
+				padding: 5px 10px 8px 10px;
+			}
+
+			button:hover {
+				animation-name: background-color;
+				/* 1000ms is equal to 1s */
+				/* the animation reset after 500ms has passed */
+				animation-duration: 500ms;
+				/* modify fill mode of an animation */
+				/* specifies the style applied to an element when the animation has finished */
+				animation-fill-mode: forwards;
+			}
+
+			@keyframes background-color {
+				100% {
+					background-color: yellow;
+					color: black;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="rect"></div>
+		<button>Register</button>
+	</body>
+</html>

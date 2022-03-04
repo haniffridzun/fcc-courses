@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Graphics</title>
+		<style>
+			.center {
+				position: relative;
+				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				width: 100px;
+				height: 100px;
+				background-color: transparent;
+				border-radius: 50%;
+				box-shadow: 25px 10px 0 0 yellow;
+			}
+
+			.heart {
+				position: absolute;
+				margin: auto;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: pink;
+				height: 50px;
+				width: 50px;
+				transform: rotate(-45deg);
+			}
+
+			/* ::after creates a pseudo-element that is the last child of the selected element */
+			/* for these pseudo-element to function properly, they must have a defined content property */
+			/* the content property is still required, but it's set to an empty string */
+			.heart::after {
+				background-color: pink;
+				content: "";
+				border-radius: 50%;
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				top: 0px;
+				left: 25px;
+			}
+
+			/* ::before create a pseudo-element that is the first child of the selected element */
+			.heart::before {
+				content: "";
+				background-color: pink;
+				border-radius: 50%;
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				top: -25px;
+				left: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="center"></div>
+		<div class="heart"></div>
+	</body>
+</html>

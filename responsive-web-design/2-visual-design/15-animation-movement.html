@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Animation Movement</title>
+		<style>
+			div {
+				height: 40px;
+				width: 70%;
+				background: black;
+				margin: 50px auto;
+				border-radius: 5px;
+				position: relative;
+			}
+
+			#rect {
+				animation-name: vertical;
+				animation-duration: 4s;
+			}
+
+			/* when elements have specified position, fixed / relative, CSS offset properties */
+			/* right / left / top / bottom can be used in animation rules to create movement */
+			@keyframes vertical {
+				0% {
+					background-color: blue;
+					/* push item downwards then upwards by setting the top property of the */
+					/* 50% keyframes to 50px, but having it set to 0px for the first 0% */
+					/* and the last 100% keyframe */
+					top: 0px;
+				}
+				50% {
+					background-color: green;
+					top: 50px;
+				}
+				100% {
+					background-color: yellow;
+					top: 0px;
+				}
+			}
+
+			#rect2 {
+				animation-name: horizontal;
+				animation-duration: 4s;
+			}
+
+			@keyframes horizontal {
+				0% {
+					background-color: blue;
+					left: 0px;
+				}
+				50% {
+					background-color: green;
+					left: 50px;
+				}
+				100% {
+					background-color: yellow;
+					left: -50px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="rect"></div>
+		<div id="rect2"></div>
+	</body>
+</html>
