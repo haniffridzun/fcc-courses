@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Transform</title>
+		<style>
+			.ball {
+				width: 40px;
+				height: 40px;
+				margin: 50px auto;
+				position: fixed;
+				background: linear-gradient(35deg, #ccffff, #ffcccc);
+				border-radius: 50%;
+			}
+			#ball1 {
+				left: 20%;
+				z-index: 1;
+			}
+			#ball2 {
+				left: 65%;
+				z-index: 1;
+				/* change the scale of an element */
+				transform: scale(1.5);
+			}
+
+			.rectangle {
+				width: 50%;
+				height: 100px;
+				margin: 50px auto;
+				background: linear-gradient(53deg, yellow, green);
+			}
+
+			/* transform property has a variety of functions that let you scale / move / rotate */
+			/* / skew, etc., your elements. */
+			/* when used with pseudo-classes that specify a certain state of element, the */
+			/* transform property can easily add interactivity to the element */
+			/* applying tranform to an element will also affect any child elements contained */
+			.rectangle:hover {
+				transform: scale(2.1);
+			}
+
+			#top {
+				background-color: red;
+				/* skew element along its Y axis by given degree */
+				transform: skewY(-10deg);
+			}
+			#bottom {
+				background-color: blue;
+				/* skews element along its X axis by given degree */
+				transform: skewX(24deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="ball" id="ball1"></div>
+		<div class="ball" id="ball2"></div>
+		<div class="rectangle"></div>
+		<div class="rectangle" id="top"></div>
+		<div class="rectangle" id="bottom"></div>
+	</body>
+</html>

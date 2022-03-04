@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Color Gradient</title>
+		<style>
+			.linear-gradient {
+				border-radius: 20px;
+				width: 70%;
+				height: 200px;
+				margin: 50px auto;
+				/* background: linear-gradient(gradient_direction, color 1, color 2, ...); */
+				/* 90deg makes a horizontal gradient (from left to right) */
+				/* 45deg makes a diagonal gradient (from bottom left to top right) */
+				background: linear-gradient(35deg, #ccffff, #ffcccc);
+			}
+
+			.repeating-linear-gradient {
+				border-radius: 20px;
+				width: 70%;
+				height: 200px;
+				margin: 50px auto;
+				/* it repeats the specified gradien pattern */
+				/* angle value is the direction of the gradient */
+				/* color stoprs are like width values that mark where a transition takes place */
+				/* and are given with a percentage or pixel */
+				background: repeating-linear-gradient(
+					90deg,
+					yellow 0px,
+					blue 40px,
+					green 40px,
+					red 80px
+				);
+			}
+
+			body {
+				/* create background texture by adding subtle pattern as background image */
+				background: url("https://cdn-media-1.freecodecamp.org/imgr/MJAkxbh.png");
+			}
+		</style>
+	</head>
+	<body>
+		<div class="linear-gradient"></div>
+		<div class="repeating-linear-gradient"></div>
+	</body>
+</html>
