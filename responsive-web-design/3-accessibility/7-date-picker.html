@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Date Picker</title>
+	</head>
+	<body>
+		<header>
+			<h1>Tournaments</h1>
+		</header>
+		<main>
+			<section>
+				<h2>Mortal Kombat Tournament Survey</h2>
+				<form>
+					<p>Tell us the best date for the competition</p>
+					<label for="pickdate">Preferred Date:</label>
+					<!--depending on browser support, date picker shows up in the input  -->
+					<!-- field when it's in focus, which makes filling in a form easier -->
+					<input type="date" id="datepicker" name="date" />
+					<input type="submit" name="submit" value="Submit" />
+				</form>
+			</section>
+			<article>
+				<h2>Mortal Kombat Tournament Survey Results</h2>
+				<!-- time element along with a datetime attribute to standardize times. -->
+				<!-- time element is an inline element that can wrap a date or time on page -->
+				<p>
+					Thank you to everyone for responding to Master Camper Cat's survey.
+					The best day to host the vaunted Mortal Kombat tournament is
+					<time datetime="2016-09-15">Thursday, September 15<sup>th</sup></time
+					>. May the best ninja win!
+				</p>
+				<section>
+					<h3>Comments:</h3>
+					<article>
+						<p>
+							Posted by: Sub-Zero on
+							<time datetime="2016-08-13T20:01Z">August 13<sup>th</sup></time>
+						</p>
+						<p>Johnny Cage better be there, I'll finish him!</p>
+					</article>
+					<article>
+						<p>
+							Posted by: Doge on
+							<time datetime="2016-08-15T08:12Z">August 15<sup>th</sup></time>
+						</p>
+						<p>Wow, much combat, so mortal.</p>
+					</article>
+					<article>
+						<p>
+							Posted by: The Grim Reaper on
+							<time datetime="2016-08-16T00:00Z">August 16<sup>th</sup></time>
+						</p>
+						<p>Looks like I'll be busy that day.</p>
+					</article>
+				</section>
+			</article>
+		</main>
+		<footer>&copy; 2018 Camper Cat</footer>
+	</body>
+</html>
