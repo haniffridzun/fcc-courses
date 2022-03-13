@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Align-items</title>
+		<style>
+			#box-container {
+				background: gray;
+				display: flex;
+				height: 500px;
+				/* align-items align items along the cross axis. for */
+				/* row, it tells CSS to push the items in the entire */
+				/* row up or down within the container. for a column, */
+				/* how to push all the items left or right within the */
+				/* container */
+				align-items: center;
+				/* other options */
+
+				/* flex-start :: aligns items to the start of the flex container */
+
+				/* flex-end :: aligns items to the end of the flex container */
+
+				/* center :: align items to the center */
+
+				/* stretch :: stretch the items to fill the flex container */
+
+				/* baseline :: baseline is a text concept, it align items to their baseline */
+			}
+			#box-1 {
+				background-color: dodgerblue;
+				width: 200px;
+				font-size: 24px;
+			}
+
+			#box-2 {
+				background-color: orangered;
+				width: 200px;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box-container">
+			<div id="box-1"><p>hello</p></div>
+			<div id="box-2"><p>goodbye</p></div>
+		</div>
+	</body>
+</html>

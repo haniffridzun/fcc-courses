@@ -6,99 +6,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Display Flex</title>
 		<style>
-			/* cross size / axis :: vertical ruler*/
-			/* main size / axis :: horizontal ruler */
-			/* flex container as a row places the flex items side-by-side */
-			/* from left-to-right. for each, the direction the flex items */
-			/* are arranged is called the main axis. for a row, this is a */
-			/* horizontal line that cuts through each item. but for column, */
-			/* the main axis is a vertical line through the items */
 			#box-container {
 				height: 500px;
-				/* flex on an element allows you to use other flex properties to build */
-				/* a responsive page. it turns element into a flex container. */
+				/* display: flex; on an element allows you to use other flex */
+				/* properties to build responsive page */
 				display: flex;
-				/* it possible to align any children of that element into rows or columns. */
-				/* options :: row | column | row-reverse | column-reverse */
-				flex-direction: row;
-				/* align items porperty align flex items along the cross axis */
-				/* for a row, it tells CSS how to push the items in the entire row up */
-				/* or down within the container. and for a column, how to push all the */
-				/* items left or right within the container */
-
-				/* flex-start :: aligns items to the start of the flex container*/
-
-				/* flex-end :: aligns items to the end of the flex container. */
-
-				/* center :: align items to the center */
-
-				/* stretch :: stretch the items to fill the flex container. this is default value if no value set to align-items */
-
-				/* baseline :: align items to their baselines. baseline is a text concept */
-				align-items: baseline;
 			}
-
 			#box-1 {
 				background-color: dodgerblue;
-				width: 200px;
-				font-size: 24px;
+				width: 50%;
+				height: 50%;
 			}
 
 			#box-2 {
 				background-color: orangered;
-				width: 200px;
-				font-size: 18px;
-			}
-
-			#box-container2 {
-				background: gray;
-				display: flex;
-				height: 500px;
-				/* justify-content aligned flex items along the main axis. */
-				/* for rows, the main axis is a horizontal line and for columns it is a vertical line. */
-
-				/* center :: aligns all the flex items to the center inside the flex container */
-
-				/* flex-start :: aligns items to the start of the flex container */
-
-				/* flex-end :: aligns items to the end of the flex container */
-
-				/* space-between :: aligns items to the center of the main axis, 
-				with extra space placed between the items */
-
-				/* space-around :: similar to space-between but the first and last items 
-				are not locked to the edges of the container, the space is distributed
-				around all the items with a half space on either end of the flex container */
-
-				/* space-evenly :: distribute space evenly between the flex items with a full
-				space at either end of the flex container */
-				justify-content: center;
-			}
-			#box-11 {
-				background-color: dodgerblue;
-				width: 25%;
-				height: 100%;
-			}
-
-			#box-21 {
-				background-color: orangered;
-				width: 25%;
-				height: 100%;
+				width: 50%;
+				height: 50%;
 			}
 		</style>
 	</head>
 	<body>
 		<div id="box-container">
-			<div id="box-1">
-				<p>hello</p>
-			</div>
-			<div id="box-2">
-				<p>goodbye</p>
-			</div>
-		</div>
-		<div id="box-container2">
-			<div id="box-11"></div>
-			<div id="box-21"></div>
+			<div id="box-1"></div>
+			<div id="box-2"></div>
 		</div>
 	</body>
 </html>

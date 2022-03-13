@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Flex Direction Row</title>
+		<style>
+			#box-container-left {
+				/* display: flex turns element into a flex container. this makes */
+				/* it possible to align any children of that element into rows */
+				/* or columns. */
+				display: flex;
+				height: 300px;
+				width: 50%;
+			}
+			#box-1 {
+				background-color: blue;
+				width: 50%;
+				height: 50%;
+			}
+
+			#box-2 {
+				background-color: red;
+				width: 50%;
+				height: 50%;
+			}
+
+			#box-container-right {
+				display: flex;
+				height: 300px;
+				width: 50%;
+				/* adding flex-direction to the parent item and setting it to */
+				/* row or column. creating a row will align the children horizontally */
+				/* default value for flex-direction property is row */
+				flex-direction: row-reverse;
+			}
+
+			#box-3 {
+				background-color: green;
+				width: 50%;
+				height: 50%;
+			}
+
+			#box-4 {
+				background-color: yellow;
+				width: 50%;
+				height: 50%;
+			}
+
+			p {
+				font-size: xx-large;
+			}
+		</style>
+	</head>
+	<body>
+		<div style="display: flex">
+			<div id="box-container-left">
+				<div id="box-1"><p>1</p></div>
+				<div id="box-2"><p>2</p></div>
+			</div>
+			<div id="box-container-right">
+				<div id="box-3"><p>3</p></div>
+				<div id="box-4"><p>4</p></div>
+			</div>
+		</div>
+	</body>
+</html>
